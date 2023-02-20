@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.amber,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -70,11 +72,105 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      
+      drawer: Drawer(
+        
+        // Add a ListView to the drawer. This ensures the user can scroll
+        // through the options in the drawer if there isn't enough vertical
+        // space to fit everything.
+        
+        child: ListView(
+          
+          children: [
+            
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin:Alignment.topCenter, 
+                  end: Alignment.bottomCenter, 
+                  colors: <Color>[
+                    Color.fromARGB(255, 179, 32, 22),
+                    Color.fromARGB(255, 199, 36, 25)]
+                )
+              ),
+              child: Align(
+                alignment: Alignment.bottomLeft,
+                child: Text('This is a header', 
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                )
+            ),
+            
+            ListTile(
+              title: const Text('Item 1'),
+              onTap: () { Navigator.pop(context); },
+            ),
+
+            ListTile(
+              title: const Text('Item 2'),
+              onTap: () { Navigator.pop(context); },
+            ),
+
+            ListTile(
+              title: const Text('Item 3'),
+              onTap: () { Navigator.pop(context); },
+            ),
+
+            ListTile(
+              title: const Text('Item 4'),
+              onTap: () { Navigator.pop(context); },
+            ),
+
+            ListTile(
+              title: const Text('Item 5'),
+              onTap: () { Navigator.pop(context); },
+            ),
+
+            ListTile(
+              title: const Text('Item 6'),
+              onTap: () { Navigator.pop(context); },
+            ),
+
+            ListTile(
+              title: const Text('Item 7'),
+              onTap: () { Navigator.pop(context); },
+            ),
+
+            ListTile(
+              title: const Text('Item 8'),
+              onTap: () { Navigator.pop(context); },
+            ),
+
+            ListTile(
+              title: const Text('Item 9'),
+              onTap: () { Navigator.pop(context); },
+            ),
+
+            ListTile(
+              title: const Text('Item 10'),
+              onTap: () { Navigator.pop(context); },
+            ),
+
+            ListTile(
+              title: const Text('Item 11'),
+              onTap: () { Navigator.pop(context); },
+            ),
+
+            ListTile(
+              title: const Text('Item 12'),
+              onTap: () { Navigator.pop(context); },
+            ),
+          ]
+
+        )
+      ),
+
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
+
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
