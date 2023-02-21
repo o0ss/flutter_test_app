@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   colors: <Color>[
                     Color.fromARGB(255, 179, 32, 22),
                     Color.fromARGB(255, 199, 36, 25)]
-                )
+                ),
               ),
               child: Align(
                 alignment: Alignment.bottomLeft,
